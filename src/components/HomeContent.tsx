@@ -6,9 +6,14 @@ import Link from 'next/link';
 interface HomeContentProps {
   authorName: string;
   bio: string;
+  social: {
+    github?: string;
+    linkedin?: string;
+    twitter?: string;
+  };
 }
 
-export default function HomeContent({ authorName, bio }: HomeContentProps) {
+export default function HomeContent({ authorName, bio, social }: HomeContentProps) {
   return (
     <div className="container">
       <div className="content">
@@ -29,7 +34,7 @@ export default function HomeContent({ authorName, bio }: HomeContentProps) {
             Browse Topics
           </Link>
         </div>
-        <SocialList />
+        <SocialList github={social.github} linkedin={social.linkedin} twitter={social.twitter} />
       </div>
       <style jsx>{`
         .container {

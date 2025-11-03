@@ -31,7 +31,11 @@ export default async function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <HomeContent authorName={settings.author.name} bio={settings.author.bio} />
+      <HomeContent
+        authorName={settings.author.name}
+        bio={settings.author.bio}
+        social={settings.social}
+      />
       {latestPost && (
         <div className="max-w-4xl mx-auto mt-16 px-4">
           <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
