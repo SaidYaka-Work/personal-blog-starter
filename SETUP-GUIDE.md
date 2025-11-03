@@ -23,7 +23,7 @@ This guide will walk you through creating your own blog (like johnsmith.com) ste
 
 **What's happening:** You're getting a copy of a pre-built blog that you can customize.
 
-1. Go to this link: [Your Template Repository]
+1. Go to this link: [[Your Template Repository](https://github.com/SaidYaka-Work/personal-blog-starter/)]
 2. Click the green **"Use this template"** button (top right)
 3. Click **"Create a new repository"**
 4. Name it whatever you want (example: `my-blog` or `johnsmith-blog`)
