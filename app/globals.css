@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme CSS variables - set dynamically from Site Settings */
+:root {
+  /* These are set from content/settings/site.json */
+  --color-primary: #3b82f6;
+  --color-background: #ffffff;
+  --color-text: #1f2937;
+  --color-accent: #10b981;
+}
+
+/* Apply theme colors to common elements */
+a {
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-accent);
+} 

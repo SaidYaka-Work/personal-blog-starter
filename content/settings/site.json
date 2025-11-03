@@ -1,0 +1,35 @@
+{
+  "site": {
+    "title": "Your Name - Blog",
+    "description": "Share your thoughts, ideas, and experiences with the world.",
+    "url": "https://yoursite.com",
+    "locale": "en_US"
+  },
+  "author": {
+    "name": "Your Name",
+    "bio": "Writer, thinker, and creator. This is where I share my journey and insights.",
+    "email": "",
+    "image": "/images/profile.jpg"
+  },
+  "social": {
+    "twitter": "yourusername",
+    "linkedin": "yourusername",
+    "github": "yourusername"
+  },
+  "theme": {
+    "primaryColor": "#3B82F6",
+    "backgroundColor": "#FFFFFF",
+    "textColor": "#1F2937",
+    "accentColor": "#10B981"
+  },
+  "seo": {
+    "keywords": [
+      "blog",
+      "writing",
+      "thoughts",
+      "ideas"
+    ],
+    "ogImage": "/og/default.png",
+    "twitterCard": "summary_large_image"
+  }
+}
