@@ -174,6 +174,24 @@ Now let's write a blog post!
 
 ---
 
+### 💡 Pro Tip: Schedule Posts for Later!
+
+Want to write a post now but publish it later?
+
+1. When creating a post, set the **Date** to a future date
+2. Click **"Save"**
+3. The post will be hidden until that date arrives
+4. On the scheduled date, it automatically appears!
+
+**Perfect for:**
+- Writing multiple posts in advance
+- Publishing at optimal times
+- Planning content calendars
+
+**Note:** In local development, future posts are visible (for preview). In production, they're hidden until the scheduled date.
+
+---
+
 ### Method 2: Using GitHub Directly (No Extra Tools)
 
 1. Go to your repository on GitHub
