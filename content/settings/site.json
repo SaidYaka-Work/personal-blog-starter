@@ -1,15 +1,15 @@
 {
   "site": {
-    "title": "Your Name - Blog",
+    "title": "John Smith - Blog",
     "description": "Share your thoughts, ideas, and experiences with the world.",
     "url": "https://yoursite.com",
     "locale": "en_US"
   },
   "author": {
-    "name": "Your Name",
+    "name": "John Smith",
     "bio": "Writer, thinker, and creator. This is where I share my journey and insights.",
     "email": "",
-    "image": "/images/profile.jpg"
+    "image": ""
   },
   "social": {
     "twitter": "yourusername",
@@ -17,10 +17,10 @@
     "github": "yourusername"
   },
   "theme": {
-    "primaryColor": "#3B82F6",
+    "primaryColor": "#000000",
     "backgroundColor": "#FFFFFF",
     "textColor": "#1F2937",
-    "accentColor": "#10B981"
+    "accentColor": "#DE00DE"
   },
   "seo": {
     "keywords": [

@@ -2,10 +2,12 @@ import Layout from '@/components/Layout';
 import HomeContent from '@/src/components/HomeContent';
 import Link from 'next/link';
 import { getAllPosts } from '@/lib/posts';
+import { getSiteSettings } from '@/lib/settings';
 
 export default async function Home() {
   const posts = await getAllPosts();
   const latestPost = posts[0]; // Posts are sorted by date, most recent first
+  const settings = getSiteSettings();
 
   // JSON-LD Schema for Website/Person
   const schema = {
@@ -13,18 +15,13 @@ export default async function Home() {
     '@type': 'ProfilePage',
     mainEntity: {
       '@type': 'Person',
-      name: 'Said Yaka',
-      jobTitle: 'AI Engineer',
-      worksFor: {
-        '@type': 'Organization',
-        name: 'Evertune.ai',
-        url: 'https://evertune.ai',
-      },
-      url: 'https://saidyaka.com',
+      name: settings.author.name,
+      url: settings.site.url,
       sameAs: [
-        'https://github.com/SaidYaka-Work',
-        'https://www.linkedin.com/in/saidyaka/',
-      ],
+        settings.social.github ? `https://github.com/${settings.social.github}` : undefined,
+        settings.social.linkedin ? `https://www.linkedin.com/in/${settings.social.linkedin}` : undefined,
+        settings.social.twitter ? `https://twitter.com/${settings.social.twitter}` : undefined,
+      ].filter(Boolean),
     },
   };
 
@@ -34,7 +31,7 @@ export default async function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <HomeContent />
+      <HomeContent authorName={settings.author.name} bio={settings.author.bio} />
       {latestPost && (
         <div className="max-w-4xl mx-auto mt-16 px-4">
           <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">

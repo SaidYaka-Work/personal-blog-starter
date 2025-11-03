@@ -3,18 +3,23 @@
 import { SocialList } from './SocialList';
 import Link from 'next/link';
 
-export default function HomeContent() {
+interface HomeContentProps {
+  authorName: string;
+  bio: string;
+}
+
+export default function HomeContent({ authorName, bio }: HomeContentProps) {
   return (
     <div className="container">
       <div className="content">
         <h1 className="title">
-          Hi, I&apos;m <span className="fancy">Said Yaka</span>
+          Hi, I&apos;m <span className="fancy">{authorName}</span>
         </h1>
         <p className="subtitle">
           Welcome to my blog
         </p>
         <p className="description">
-          Thoughts on technology, development, and everything in between.
+          {bio}
         </p>
         <div className="cta-buttons">
           <Link href="/posts" className="btn-primary">
