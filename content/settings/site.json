@@ -1,33 +1,40 @@
 {
+  "_instructions": "Edit this file to customize your blog! Change the values below.",
+  
   "site": {
-    "title": "John Smith - Blog",
+    "title": "Your Name - Blog",
     "description": "Share your thoughts, ideas, and experiences with the world.",
     "url": "https://yoursite.com",
     "locale": "en_US"
   },
+  
   "author": {
-    "name": "John Smith",
+    "name": "Your Name",
     "bio": "Writer, thinker, and creator. This is where I share my journey and insights.",
     "email": "",
-    "image": "/images/sora-ai-visual.jpg"
+    "image": "/images/profile.jpg"
   },
+  
   "social": {
+    "_note": "Enter your usernames WITHOUT the @ symbol",
     "twitter": "yourusername",
     "linkedin": "yourusername",
     "github": "yourusername"
   },
+  
   "theme": {
-    "primaryColor": "#000000",
+    "_note": "Use hex color codes like #FF0000 for red, #0000FF for blue",
+    "primaryColor": "#3B82F6",
     "backgroundColor": "#FFFFFF",
     "textColor": "#1F2937",
-    "accentColor": "#DE00DE"
+    "accentColor": "#10B981"
   },
+  
   "seo": {
     "keywords": [
       "blog",
       "writing",
-      "thoughts",
-      "ideas"
+      "thoughts"
     ],
     "ogImage": "/og/default.png",
     "twitterCard": "summary_large_image"

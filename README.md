@@ -2,132 +2,155 @@
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/SaidYaka-Work/personal-blog-starter&project-name=my-blog&repository-name=my-blog)
 
-A beautiful, SEO-optimized blog template with visual editing powered by Tina CMS. Perfect for non-technical users who want their own blog like `johnsmith.com`.
+Dead simple blog template. Just edit files on GitHub - no complex tools needed!
 
-## 🚀 Get Started in 3 Minutes
+## 🚀 Get Started (2 Minutes)
 
-### Step 1: Deploy Your Blog (1 click)
-Click the **"Deploy with Vercel"** button above. It will:
-- ✅ Create a GitHub repo for you automatically
-- ✅ Deploy your blog to the internet
-- ✅ Give you a live URL in 60 seconds
+### Step 1: Deploy
+1. Click the "Deploy with Vercel" button above
+2. Sign in with GitHub
+3. Click "Deploy"
+4. **Done! Your blog is live!**
 
-**Your blog is now live!** (Example: `my-blog.vercel.app`)
+### Step 2: Customize
+Go to your new GitHub repository and edit these 3 things:
 
-### Step 2: Set Up Visual Editor (2 minutes)
-1. Go to [app.tina.io](https://app.tina.io)
-2. Click **"Sign in with GitHub"**
-3. Click **"Add a site"**
-4. Select your blog repository
-5. Click **"Continue"**
+#### 1. Your Info (`content/settings/site.json`)
+```json
+{
+  "site": {
+    "title": "Your Name - Blog",
+    "url": "https://yoursite.com"
+  },
+  "author": {
+    "name": "Your Name",
+    "bio": "Your bio here"
+  },
+  "social": {
+    "twitter": "yourusername",
+    "github": "yourusername"
+  },
+  "theme": {
+    "primaryColor": "#3B82F6"
+  }
+}
+```
 
-**Done! You can now edit your blog visually!**
+#### 2. Write a Post (`content/posts/my-first-post.mdx`)
+Create a new file, copy this template:
 
-### Step 3: Customize & Write (1 minute)
-1. In Tina Cloud (app.tina.io), click **"Go to site"**
-2. Click **"Site Settings"** to update your name, bio, colors
-3. Click **"Posts"** to write your first blog post
-4. Click **"Save"** - changes go live in 2 minutes!
+```markdown
+---
+slug: "my-first-post"
+title: "My First Post"
+date: 2025-11-03
+author: Your Name
+tags:
+  - Personal
+description: "My first blog post!"
+---
 
-**That's it! No environment variables, no configuration needed.**
+# Hello World
+
+This is my first blog post. Write anything here!
+
+## You can use:
+- **Bold text**
+- *Italics*
+- [Links](https://example.com)
+- Images: `![Alt text](/images/photo.jpg)`
+```
+
+#### 3. Add Images (`public/images/`)
+Upload images to this folder, then use them in posts:
+```markdown
+![My Photo](/images/my-photo.jpg)
+```
+
+**That's it!** Changes go live in 2 minutes.
 
 ---
 
-## ✨ Features
+## 📁 Simple Structure
 
-- 📝 **Visual Blog Editor** - Write posts like Google Docs (no code needed!)
-- 🎨 **Customizable Design** - Change colors, bio, and settings with color pickers
-- 🚀 **Fast & SEO-Friendly** - Static site generation for maximum performance
-- 💰 **Completely Free** - GitHub + Vercel + Tina Cloud free tiers
-- 📱 **Mobile Responsive** - Looks great on all devices
-- 🔍 **Search Engine Optimized** - Built-in SEO best practices
-- ⏰ **Scheduled Posts** - Write now, publish later automatically
-
-## 🎯 Perfect For
-
-- Writers who want their own blog
-- Professionals building a personal brand  
-- Anyone who wants `yourname.com` without coding
-- People who've never built a website before
-
-## 🎨 What You Can Customize (All Visual, No Code!)
-
-### Via Site Settings in Tina:
-- ✅ Your name, bio, email
-- ✅ Profile photo (drag & drop upload)
-- ✅ Social media links (Twitter, LinkedIn, GitHub)
-- ✅ Theme colors (color picker!)
-- ✅ Site title & description
-- ✅ SEO keywords and settings
-
-### What Gets Updated Automatically:
-- Page titles
-- Meta descriptions
-- Social media preview cards
-- Link colors throughout the site
-- Author information everywhere
+```
+├── content/
+│   ├── posts/          ← Your blog posts (.mdx files)
+│   └── settings/       ← Site settings (site.json)
+├── public/
+│   └── images/         ← Your images
+└── README.md           ← You are here!
+```
 
 ---
 
-## 💰 Cost Breakdown
+## ✏️ How to Edit
 
-- **Vercel hosting:** FREE forever
-- **GitHub:** FREE
-- **Tina CMS:** FREE (up to 2 users, 1000 edits/month)
-- **Custom domain:** ~$12/year (optional)
+### On GitHub (Easiest):
+1. Go to your repository
+2. Click on a file
+3. Click the pencil icon (Edit)
+4. Make changes
+5. Click "Commit changes"
+6. Wait 2 minutes - live!
 
-**Total to start: $0**
-
----
-
-## 📖 Detailed Documentation
-
-- [**SETUP-GUIDE.md**](./SETUP-GUIDE.md) - Complete step-by-step with screenshots
-- [**SITE-SETTINGS-FEATURES.md**](./SITE-SETTINGS-FEATURES.md) - Everything you can customize
-- [**QUICK-START.md**](./QUICK-START.md) - Quick reference for developers
+### Schedule Posts:
+Set a future date in the post frontmatter. It will auto-publish on that date!
 
 ---
 
-## 🆘 Common Questions
+## 🎨 What You Can Change
 
-**Q: Do I need to know how to code?**  
-A: No! Everything is point-and-click.
-
-**Q: Where do I edit my blog?**  
-A: Go to [app.tina.io](https://app.tina.io) - it's like WordPress but better!
-
-**Q: Can I use my own domain name (like johnsmith.com)?**  
-A: Yes! Buy a domain and connect it in Vercel settings (takes 5 minutes).
-
-**Q: How do I write blog posts?**  
-A: In Tina Cloud, click "Posts" → "Create New" → write and save!
-
-**Q: My changes aren't showing up**  
-A: Wait 2-3 minutes after saving. Vercel rebuilds your site automatically.
-
-**Q: Can I schedule posts for later?**  
-A: Yes! Just set a future date when creating a post.
-
-**Q: What if I make a mistake?**  
-A: Everything is version controlled in GitHub. You can undo any change!
+Edit `content/settings/site.json`:
+- ✅ Your name, bio, social links
+- ✅ Site title and description  
+- ✅ Theme colors (hex codes)
+- ✅ SEO keywords
 
 ---
 
-## 🎓 How It Works (For the Curious)
+## 💰 Cost
 
-1. **Your blog** is stored in GitHub (like Google Drive for code)
-2. **Vercel** turns it into a website and hosts it (free!)
-3. **Tina Cloud** gives you a visual editor at app.tina.io
-4. When you save in Tina → it commits to GitHub → Vercel rebuilds → blog updates!
-
-Everything happens automatically. You just write and click save.
+- **Everything: FREE**
+- Optional domain: ~$12/year
 
 ---
 
-## 🎉 Ready to Start?
+## 🆘 Help
 
-1. Click the **"Deploy with Vercel"** button at the top
-2. Follow the 3-step setup above
-3. You'll have a live blog in 3 minutes!
+**Q: How do I write a post?**  
+A: Create a new `.mdx` file in `content/posts/`, copy the template above
 
-**Questions?** Check the [SETUP-GUIDE.md](./SETUP-GUIDE.md) for detailed help.
+**Q: How do I add images?**  
+A: Upload to `public/images/` on GitHub, use `![Alt](/images/name.jpg)` in posts
+
+**Q: Changes not showing?**  
+A: Wait 2-3 minutes for Vercel to rebuild
+
+**Q: How do I change colors?**  
+A: Edit `theme.primaryColor` in `content/settings/site.json` (use hex codes like `#FF0000`)
+
+---
+
+## 🎉 You're Ready!
+
+1. Click "Deploy with Vercel"
+2. Edit `site.json` with your info
+3. Write your first post
+4. Share your blog!
+
+**Template by [Said Yaka](https://github.com/SaidYaka-Work)**
+
+## 🎨 Customize Your Icon/Favicon
+
+Replace `app/icon.png` with your own image:
+1. Go to `app/icon.png` in your repository
+2. Click "Delete file"
+3. Click "Upload files"
+4. Upload your icon (PNG, 512x512px recommended)
+5. Name it `icon.png`
+6. Commit
+
+Your browser tab icon will update!
+
+---
