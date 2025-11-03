@@ -1,10 +1,12 @@
 import { MetadataRoute } from 'next';
 import { getAllPosts } from '@/lib/posts';
+import { getSiteSettings } from '@/lib/settings';
 
 export const dynamic = 'force-static';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://saidyaka.com';
+  const settings = getSiteSettings();
+  const baseUrl = settings.site.url;
   // Only include published posts (not future-dated) in production sitemap
   const posts = await getAllPosts({ includeFuture: false });
 
