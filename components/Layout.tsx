@@ -45,6 +45,17 @@ export default function Layout({ children }: LayoutProps) {
         <div className="container mx-auto px-4 py-8">
           <div className="text-center text-gray-600">
             <p>© {new Date().getFullYear()} {settings.author.name}. All rights reserved.</p>
+            <p className="text-sm mt-2">
+              Built with{' '}
+              <a
+                href="https://github.com/SaidYaka-Work/personal-blog-starter"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                Personal Blog Template
+              </a>
+            </p>
           </div>
         </div>
       </footer>
